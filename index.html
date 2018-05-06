@@ -58,7 +58,7 @@
             </div>
         </div>
     </nav>
-    <div class="intro-header">
+    <div class="intro-header" id="intro">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -164,7 +164,7 @@
             </section>
         </div>
     </div>
-    <div class="content-section-b" id="intro">
+    <div class="content-section-b">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-sm-6">
@@ -453,6 +453,23 @@
     <script src="js/jquery-1.11.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/process-flow.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate(
+                        { scrollTop: $(hash).offset().top },
+                        800,
+                        function () {
+                            window.location.hash = hash;
+                        });
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>
