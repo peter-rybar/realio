@@ -19,39 +19,7 @@ $(document).ready(function(){
 											width: "+=30%"
 										}, 1500, function() {
 											$('.work-step .work-order').eq(3).fadeIn(100, function() {
-												$('.work-step .work-title').eq(3).fadeIn(100, function() {
-													$('.line-middle').animate({
-														width: "+=81%"
-													}, 1500, function() {
-														$('.work-step .work-order').eq(4).fadeIn(100, function() {
-															$('.work-step .work-title').eq(4).fadeIn(100, function() {
-																$('.line-bottom').animate({
-																	width: "+=26%"
-																}, 1500, function() {
-																	$('.work-step .work-order').eq(5).fadeIn(100, function() {
-																		$('.work-step .work-title').eq(5).fadeIn(100, function() {
-																			$('.line-bottom').animate({
-																				width: "+=24%"
-																			}, 1500, function() {
-																				$('.work-step .work-order').eq(6).fadeIn(100, function() {
-																					$('.work-step .work-title').eq(6).fadeIn(100, function() {
-																						$('.line-bottom').animate({
-																							width: "+=30%"
-																						}, 1500, function() {
-																							$('.work-step .work-order').eq(7).fadeIn(100, function() {
-																								$('.work-step .work-title').eq(7).fadeIn(100);
-																							});
-																						});
-																					});
-																				});
-																			});
-																		});
-																	});
-																});
-															});
-														});
-													});
-												});
+												$('.work-step .work-title').eq(3).fadeIn(100);
 											});
 										});
 									});
@@ -64,10 +32,6 @@ $(document).ready(function(){
 		});
 	}, 1000);
 
-
-
-
-
 	var percentDiv = detectWidthReferenceInMobile();
 	if(percentDiv > 98.5 && percentDiv <= 100) {
 		$('#references .reference').each(function(index){
@@ -78,8 +42,6 @@ $(document).ready(function(){
 			$(this).removeClass('float-shadow');
 		});
 	}
-
-
 
 	// point hover on the reference
 	$('.work-step').hover(function() {
